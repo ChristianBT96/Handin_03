@@ -15,8 +15,19 @@ package Question_04
 
 
 fun main() {
-    val redditPost1: RedditPost = RedditPost("HE", 0, "Hello")
+    val redditPost1: RedditPost = RedditPost("John Doe", "Hello")
+    val redditPost2: RedditPost = RedditPost("Jane Doe", "Goodbye")
+    val redditPost3: RedditPost = RedditPost("John Doe", "I am back")
+    println(redditPost1.voteBalance)
+    redditPost1.upVote()
+    println(redditPost1.voteBalance)
+    redditPost3.downVote()
+    redditPost3.downVote()
+    redditPost3.downVote()
+    redditPost1.upVote()
+    redditPost1.upVote()
 
-    println(redditPost1)
+    val listOfRedditPosts: List<RedditPost> = listOf(redditPost1, redditPost2, redditPost3)
+    println(listOfRedditPosts.sorted())
 
 }
